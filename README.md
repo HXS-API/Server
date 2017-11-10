@@ -10,7 +10,7 @@ However, IATI's [datastore](http://datastore.iatistandard.org/docs/) and [API](h
 
 ## Architecture
 
-HXS is being built using AWS components. HXS's Python [codebase]() will principally run from within an EC2 instance and carry out four main operations:
+**HXS** is being built using AWS components. HXS's Python [codebase]() will principally run from within an EC2 instance and carry out four main operations:
 
 * Identify the URL locations of all known IATI files by scraping the IATI Registry
 * Strip XML file information from each URL and generate a single XML file
