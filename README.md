@@ -25,4 +25,4 @@ The server will also give developers the ability to use HXS’s IATI clone like 
 
 ## Get involved
 
-We can use help to setup HXS’s AWS architecture, develop and test HXS’s codebase and produce some API documentation as well as a help to test and improve the Humanitarian Exchange Server and setup a basic HXS.ngo landing page website. To get involved or to learn more about the project, contact: hxs(at)beehive.ngo
+We can use help to setup HXS’s AWS architecture, develop and test HXS’s codebase and produce some API documentation as well as a help to test and improve the Humanitarian Exchange Server and setup a basic HXS.ngo landing page website. To get involved or to learn more about the project, **contact**: hxs(at)beehive.ngo
