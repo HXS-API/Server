@@ -1,22 +1,28 @@
-# HXS IATI Database, Server and API
+# HXS (Humanitarian Exchange Server)
+![HXS Diagram](https://github.com/HXS-API/Server/blob/master/hxs_server.png)
+HXS is an open source initiative bringing humanitarian organizations, tech volunteers and supporters together to setup an enterprise-grade IATI database, server and API for developers to use to prototype, test power and scale next-generation, IATI-data-driven applications.
 
-HXS is being principally built using Python and AWS components.
+## Function
 
-## Workflow and Output
+**IATI** is a technical framework managed by the [International Aid Transparency Initiative](http://iatistandard.org) that the humanitarian community has been working concertedly to setup and broadly mandate. The framework provides organizations and donors with a channel to openly share and compare detailed information on aid activities, transactions and results and make the information accessible to machine applications.
 
-HXS will regularly scrape aid activity files published by humanitarian organizations on their own web servers, database XML file information then re-serve the information via an enterprise-grade API.
+However, IATI's [datastore](http://datastore.iatistandard.org/docs/) and [API](https://iatiregistry.org/registry-api) aren't adapted to dedicatedly power modern, enterprise-grade applications. So we're building an IATI data source that is sophisticated and robust enough to address the need.
 
-The new API will provide developers with the apility to query IATI's entire corpus using any of IATI's 217 plus unique information fields and use the access point to power applications creating, reading, updating and deleting information from the HXS IATI database.
+## Architecture
 
-## Operations
+HXS is being built using AWS components. HXS's Python [codebase]() will principally run from within an EC2 instance and carry out four main operations:
 
-HXS will carry out the following four principle operations:
+* Identify the URL locations of all known IATI files by scraping the IATI Registry
+* Strip XML file information from each URL and generate a single XML file
+* Process the XML file and database information on aid activities
+* Automate the operations, checking IATI daily to maintain a fully up-to-date IATI dataset
 
-* Identify the URLs of all known IATI files
-* Extract XML from the files and generate one single XML file
-* Process the XML file and database the information
-* Automate the process on a daily or other schedule
+### Output
+
+The Humanitarian Exchange Server will give developers full access to IATI’s entire dataset and the ability to carry out sophisticated operations, querying the dataset in a host of ways employing any of IATI’s 217 plus information fields (counted by XPath).
+
+The server will also give developers the ability to use HXS’s IATI clone like a cloud database, giving applications the ability to read and carry out write, update and delete operations enabling users to start, edit, share and compare IATI compliant files before formally publishing their files to IATI.
 
 ## Get involved
 
-Volunteer team members are needed to help setup the project's AWS architecture, code operators and develop an initial client/server code library. To get involved or to learn more about the project, contact: hxs(at)beehive.ngo
+We can use help to setup HXS’s AWS architecture, develop and test HXS’s codebase and produce some API documentation as well as a help to test and improve the Humanitarian Exchange Server and setup a basic HXS.ngo landing page website. To get involved or to learn more about the project, contact: hxs(at)beehive.ngo
